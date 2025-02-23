@@ -12,7 +12,7 @@ Este projeto visa identificar padrões que levam à inadimplência de clientes e
 ## 📂 Estrutura do Projeto
 
 ├── data/                 # Dados brutos e processados <br>
-├── notebooks/            # Notebooks Jupyter com a análise exploratória e desenvolvimento do modelo <br>
+├── Projeto.ipynb         # Notebooks Jupyter com a análise exploratória e desenvolvimento do modelo <br>
 ├── README.md             # Documento atual
 
 ## 🔧 Tecnologias Utilizadas
