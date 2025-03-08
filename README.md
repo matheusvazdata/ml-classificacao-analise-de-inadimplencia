@@ -11,9 +11,9 @@ Este projeto visa identificar padrões que levam à inadimplência de clientes e
 
 ## 📂 Estrutura do Projeto
 
-├── data/                 # Dados brutos e processados <br>
-├── Projeto.ipynb         # Notebooks Jupyter com a análise exploratória e desenvolvimento do modelo <br>
-├── README.md             # Documento atual
+├── data/                                          # Dados brutos e processados <br>
+├── Projeto_ML_Coder_House_Classificacao.ipynb     # Notebook Jupyter com a análise exploratória e desenvolvimento do modelo <br>
+├── README.md                                      # Documento atual
 
 ## 🔧 Tecnologias Utilizadas
 
@@ -27,10 +27,10 @@ Este projeto visa identificar padrões que levam à inadimplência de clientes e
 1. Aquisição de Dados: Coleta de informações financeiras dos clientes.
 2. Tratamento de Dados: Limpeza e preparação dos dados para análise.
 3. Análise Exploratória: Visualização de padrões e correlações.
-4. (**Em construção**) Engenharia de Features: Seleção e transformação das variáveis.
+4. Engenharia de Features: Seleção e transformação das variáveis.
 5. Modelagem: Treinamento e validação de modelos de classificação.
 6. Avaliação de Performance: Métricas como acurácia, recall e F1-score.
-7. (**Em construção**) Interpretação e Conclusão: Discussão dos resultados e sugestões para aplicação.
+7. Interpretação e Conclusão: Discussão dos resultados e sugestões para aplicação.
 
 ## 📈 Principais Resultados
 
