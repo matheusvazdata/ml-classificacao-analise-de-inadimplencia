@@ -1,52 +1,69 @@
-# 📌 Projeto: Análise de Inadimplência e Comportamento Financeiro
+# 📌 Projeto: Classificação de Inadimplentes com Machine Learning
 
-Este projeto visa identificar padrões que levam à inadimplência de clientes e construir um modelo preditivo para auxiliar instituições financeiras na gestão de crédito e mitigação de riscos. A análise considera variáveis financeiras, comportamentais e socioeconômicas para melhorar a tomada de decisões estratégicas.
+Este projeto tem como objetivo entender os fatores que levam à **inadimplência de clientes** e desenvolver um **modelo preditivo** para auxiliar instituições financeiras na gestão de crédito. A abordagem inclui desde a análise exploratória até a otimização do modelo, utilizando técnicas avançadas de Machine Learning e Engenharia de Features.
 
 ## 🎯 Objetivos
 
-- Analisar fatores que influenciam a inadimplência.
-- Identificar variáveis relevantes para prever o comportamento financeiro dos clientes.
-- Construir e otimizar um modelo de Machine Learning para classificação de inadimplentes.
-- Fornecer insights acionáveis para aprimorar a gestão de risco financeiro.
+- **Analisar fatores** que influenciam a inadimplência.
+- **Identificar variáveis relevantes** para prever o comportamento financeiro dos clientes.
+- **Criar e otimizar um modelo de classificação**, focando na redução de falsos negativos.
+- **Gerar insights acionáveis** para aprimorar a gestão de risco financeiro.
 
 ## 📂 Estrutura do Projeto
 
-├── data/                                          # Dados brutos e processados <br>
-├── Projeto_ML_Coder_House_Classificacao.ipynb     # Notebook Jupyter com a análise exploratória e desenvolvimento do modelo <br>
-├── README.md                                      # Documento atual
+```
+├── 📂 data                                          # Backup do dataset
+├── Projeto-ML-Classificacao-de-Inadimplentes.ipynb  # Notebook principal com todo o pipeline
+├── README.md                                        # Este arquivo
+```
 
 ## 🔧 Tecnologias Utilizadas
 
 - **Linguagem**: Python
-- **Bibliotecas**: pandas, numpy, matplotlib, seaborn, scikit-learn, XGBoost, imbalanced-learn
+- **Bibliotecas**: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `XGBoost`, `imbalanced-learn`
 - **Ferramentas**: Google Colab, Google Cloud Storage, GitHub
-- **Técnicas Avançadas**: PCA, RandomizedSearchCV
+- **Técnicas Aplicadas**: **SMOTE**, **Feature Engineering**, **PCA**, **GridSearchCV**
 
 ## 📊 Etapas do Projeto
 
-1. Aquisição de Dados: Coleta de informações financeiras dos clientes.
-2. Tratamento de Dados: Limpeza e preparação dos dados para análise.
-3. Análise Exploratória: Visualização de padrões e correlações.
-4. Engenharia de Features: Seleção e transformação das variáveis.
-5. Modelagem: Treinamento e validação de modelos de classificação.
-6. Avaliação de Performance: Métricas como acurácia, recall e F1-score.
-7. Interpretação e Conclusão: Discussão dos resultados e sugestões para aplicação.
+1. **Aquisição de Dados**  
+   - Importação de dataset de clientes.
+   - Tratamento de valores ausentes e inconsistências.
+
+2. **Análise Exploratória (EDA)**  
+   - Identificação de padrões entre clientes adimplentes e inadimplentes.  
+   - Visualização das principais variáveis categóricas e numéricas.  
+
+3. **Engenharia de Features**  
+   - **Criação de novas variáveis** como taxa de utilização de crédito, média de transações e intensidade de interações.  
+   - **Transformações**: Label Encoding, One-Hot Encoding e normalização dos dados.  
+
+4. **Modelagem e Treinamento**  
+   - Teste de modelos iniciais: **Regressão Logística, Árvore de Decisão, Random Forest e XGBoost**.  
+   - Aplicação de **SMOTE** para balanceamento das classes.  
+   - **Otimização do XGBoost** com GridSearchCV.  
+
+5. **Avaliação e Interpretação**  
+   - **Métricas de performance**: Recall, AUC-ROC, F1-Score.  
+   - **Análise de matriz de confusão** para entender erros do modelo.  
+   - **Importância das features** para entender os principais fatores de inadimplência.  
 
 ## 📈 Principais Resultados
 
-- O modelo **XGBoost** apresentou os melhores resultados, sendo otimizado para minimizar falsos negativos.
-- Variáveis como **quantidade de transações**, **valor médio de transações** e **tempo de relacionamento com a instituição** foram cruciais para a classificação.
+- O **XGBoost otimizado** apresentou os melhores resultados, equilibrando recall e precisão.
+- A **quantidade de transações** e a **média do valor transacionado** foram variáveis cruciais para a previsão.
+- Clientes com **maior tempo de inatividade** e **menor uso do crédito disponível** têm maior risco de inadimplência.
 
 ## 🚀 Próximos Passos
 
-- Implementação de **LightGBM e CatBoost** para comparação de desempenho.
-- Ajuste fino no threshold para maximizar recall sem comprometer a precisão.
-- Técnicas como **SMOTE** e ajuste de **threshold** ajudaram a melhorar a detecção de inadimplentes.
+- Implementação de **LightGBM e CatBoost** para comparação de desempenho.  
+- Refinamento do **threshold de decisão** para reduzir falsos negativos.  
+- Exploração de **técnicas de Explainable AI (SHAP/LIME)** para interpretar melhor as previsões.  
 
 ## 🤝 Contribuições
 
-Contribuições são bem-vindas! Caso tenha sugestões de melhorias ou queira colaborar, abra uma **issue** ou envie um **pull request**.
+Se quiser contribuir, sinta-se à vontade para abrir uma **issue** ou enviar um **pull request**. Qualquer sugestão para melhorias será bem-vinda!
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença **MIT**. Consulte o arquivo LICENSE para mais detalhes.
